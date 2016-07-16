@@ -46,6 +46,7 @@ LOCAL_APPS = (
     # custom users app
     'Fango.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'Fango.accounts.apps.AccountsConfig'
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
