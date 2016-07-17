@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Accounts{% endblock %}
+
+{% block content %}
+
+{% if account_list %}
+    <div class="container">
+
+      <h2>Accounts</h2>
+
+      <div class="list-group">
+        {% for account in account_list %}
+            <a href="{% url 'accounts:detail' account.id %}" class="list-group-item">
+            <h4 class="list-group-item-heading">{{ account.account_name }}</h4>
+            </a>
+        {% endfor %}
+      </div>
+    </div>
+
+{% else %}
+    <p>You did not create accounts yet.</p>
+{% endif %}
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Account: {{ account.account_name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>{{ account.account_name }}</h2>
+        <p>Describtion: {{ account.description }}</p>
+        <p>Type: {{ account.account_type }}</p>
+    </div>
+  </div>
+
+</div>
+{% endblock content %}
