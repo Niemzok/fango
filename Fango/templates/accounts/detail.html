@@ -13,6 +13,13 @@
         <p>Type: {{ account.account_type }}</p>
     </div>
   </div>
+  <div class="row">
+
+    <div class="col-sm-12 ">
+      <a class="btn btn-primary" href="{% url 'accounts:edit' account.id%}">Edit</a>
+    </div>
+
+  </div>
 
 </div>
 {% endblock content %}

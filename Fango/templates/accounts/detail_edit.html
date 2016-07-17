@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Account: {{ account.account_name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2> Edit {{ account.account_name }}</h2>
+      <form action="{% url 'accounts:edit' account.id %}" method="post">
+      {% csrf_token %}
+      <label>How would you describe the Account?</label><br />
+      <input type="text" name="description" id="description" value="{{ account.description }}" />
+      <br />
+      <input type="submit" value="Save" class="btn btn-primary"/>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock content %}

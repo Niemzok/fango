@@ -16,3 +16,7 @@ def index(request):
 def detail(request, account_id):
     account = get_object_or_404(Account, pk=account_id)
     return render(request, 'accounts/detail.html', {'account': account})
+
+def edit(request, account_id):
+    account = get_object_or_404(Account, pk=account_id)
+    return render(request, 'accounts/detail_edit.html', {'account': account})

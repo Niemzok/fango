@@ -17,6 +17,11 @@ urlpatterns = [
         regex=r'^(?P<account_id>[0-9]+)/$',
         view=views.detail,
         name='detail',
+    ),
+    url(
+        regex=r'^(?P<account_id>[0-9]+)/edit/$',
+        view=views.edit,
+        name='edit',
     )
 
 ]
